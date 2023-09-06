@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web RTC Chat</title>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/client/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+  <div id="joinroom" class="flex">
+    <form class="form-horizontal" id="roomform">
+      <fieldset>
+
+      <!-- Form Name -->
+      <legend>Join a Room</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="username">Username</label>  
+        <div class="col-md-4">
+        <input id="username" name="username" type="text" placeholder="Enter a Username" class="form-control input-md" required="">
+          
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="roomcode">Room</label>  
+        <div class="col-md-4">
+        <input id="roomcode" name="roomcode" type="text" placeholder="Enter a Room" class="form-control input-md" required="">
+          
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-4">
+          <button id="submit" name="submit" class="btn btn-success">Join</button>
+        </div>
+      </div>
+
+      </fieldset>
+    </form>
+  </div>
+  <div id="chatroom" class="flex">
+    <div id="videostreams">
+      <div id="remotevideos">
+
+      </div>
+      <video id="localVideo" autoplay="true" muted="true"></video>
+    </div>
+  </div>
+  <script src="/client/js/script.js"></script>
+</body>
+</html>
